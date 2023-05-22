@@ -1,5 +1,5 @@
 {
-  "name": "@omnilogic/strapi-provider-upload-azure",
+  "name": "@strapi/provider-upload-local",
   "version": "4.10.5",
   "description": "Azure provider for strapi upload",
   "keywords": [
