@@ -1,0 +1,60 @@
+{
+  "name": "@omnilogic/strapi-provider-upload-azure",
+  "version": "4.10.5",
+  "description": "Azure provider for strapi upload",
+  "keywords": [
+    "upload",
+    "strapi",
+    "azure"
+  ],
+  "homepage": "https://strapi.io",
+  "bugs": {
+    "url": "https://github.com/strapi/strapi/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/strapi/strapi.git"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "author": {
+    "name": "Pedro Morato Kalil",
+    "email": "pedro.kalil@omnilogic.ai",
+    "url": "https://github.com/PedroKalilOmni"
+  },
+  "maintainers": [
+    {
+      "name": "Pedro Morato Kalil",
+      "email": "pedro.kalil@omnilogic.ai",
+      "url": "https://github.com/PedroKalilOmni"
+    }
+  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "./dist"
+  ],
+  "scripts": {
+    "build": "run -T tsc",
+    "build:ts": "run -T tsc",
+    "watch": "run -T tsc -w --preserveWatchOutput",
+    "clean": "run -T rimraf ./dist",
+    "prepublishOnly": "yarn clean && yarn build",
+    "test:unit": "run -T jest",
+    "test:unit:watch": "run -T jest --watch",
+    "lint": "run -T eslint ."
+  },
+  "dependencies": {
+    "@azure/storage-blob": "^12.8.0",
+    "@strapi/utils": "4.10.5",
+    "fs-extra": "10.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "29.2.0",
+    "eslint-config-custom": "4.10.5",
+    "tsconfig": "4.10.5"
+  },
+  "engines": {
+    "node": ">=14.19.1 <=18.x.x",
+    "npm": ">=6.0.0"
+  }
+}
